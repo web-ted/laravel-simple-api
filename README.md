@@ -77,3 +77,13 @@ php artisan migrate --seed
 ```
 Now we are ready to go.
 
+# Troubleshooting
+In case you run into problems accessing your files since docker runs as root and locally you probably have a different 
+uid make everything writeable. Get into the workspace and make all files and dirs available to all.
+Not so secure but still effective:
+```
+docker exec -it laradock_workspace_1 bash
+find . -type d -exec chmod 777 {} \;
+find . -type f -exec chmod 666 {} \;
+```
+
