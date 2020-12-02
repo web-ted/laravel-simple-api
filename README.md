@@ -87,3 +87,7 @@ find . -type d -exec chmod 777 {} \;
 find . -type f -exec chmod 666 {} \;
 ```
 
+# Testing 
+To test this project once you are able to run it, you can import `Pfizer.postman_collection.json` to postman
+and run the different endpoints. You can also use a cli tool like `httpie` or curl.
+
